@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>{{ ninja }}</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    {% with imageaddress='disappearingninjas/img/'|add:ninja|add:'.jpg' %}
+    <img src={% static imageaddress %} alt="{{ninja}}">
+    {% endwith %}
+  </body>
+</html>
